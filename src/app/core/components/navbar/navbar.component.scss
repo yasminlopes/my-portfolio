@@ -1,0 +1,60 @@
+.navbar-container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #0a192f;
+  color: #e6f1ff;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+    Monaco, Monospace;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    cursor: pointer;
+
+    &--item {
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0px;
+        margin-top: 4px;
+        transition: 0.3s;
+        position: absolute;
+        background: #64ffda;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+
+    span {
+      color: #64ffda;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    &-resume {
+      border: 1px solid #64ffda;
+      background: transparent;
+      color: #e6f1ff;
+      padding: 8px 20px;
+      font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+        Monaco, Monospace;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: #64ffda;
+        background-color: rgba(100, 255, 218, 0.07);
+      }
+    }
+  }
+}
