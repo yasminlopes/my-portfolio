@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { NAVBAR_ITEMS, Navbar } from '../../models/navbar.model';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +11,12 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+
+  public navbarItems = NAVBAR_ITEMS;
+  public isMenuOpen: boolean = false;
+
+  public toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
 }
