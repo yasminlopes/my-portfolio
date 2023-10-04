@@ -1,0 +1,38 @@
+<div class="dropdown">
+    <button
+      class="dropdown__toggle"
+      [ngClass]="{ 'dropdown__toggle--disabled': disabled }"
+      (click)="toggleDropdown()"
+      [disabled]="disabled"
+    >
+      <span *ngIf="icon" class="dropdown__icon material-icons">{{ icon }}</span>
+      <img
+        *ngIf="img"
+        class="dropdown__img"
+        [src]="img"
+        width="32"
+        height="32"
+        priority/>
+      <span *ngIf="title" class="dropdown__title">{{ title }}</span>
+    </button>
+  
+    <ul class="dropdown__menu" *ngIf="isOpen()">
+      <li
+        class="dropdown__menu-item"
+        *ngFor="let item of items"
+        (click)="selectItem(item)"
+      >
+        <span *ngIf="icon" class="dropdown__menu-icon material-icons">{{ item.icon }}</span>
+        <span *ngIf="icon" class="dropdown__menu-icon material-icons">{{ item.icon }}</span>
+        <img
+        *ngIf="item.img"
+        class="dropdown__menu-img"
+        [src]="item.img"
+        width="32"
+        height="32"
+        priority/>
+        {{ item.description }}
+      </li>
+    </ul>
+  </div>
+  
