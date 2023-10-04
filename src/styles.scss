@@ -1,1 +1,13 @@
-@import './assets/styles/reset';
+@import "./assets/styles/reset";
+
+body {
+  background: #0a192f;
+  color: white;
+  padding: 0 100px 0 100px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}

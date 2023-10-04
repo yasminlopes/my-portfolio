@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './containers/home/home.component';
+import { BannerSectionComponent } from './components/banner-section/banner-section.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const homeRoutes: Routes = [
   { path: '', component: HomeComponent }
@@ -9,11 +11,13 @@ const homeRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    BannerSectionComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(homeRoutes)
+    RouterModule.forChild(homeRoutes),
+    TranslateModule
   ]
 })
 export class HomeModule { }
