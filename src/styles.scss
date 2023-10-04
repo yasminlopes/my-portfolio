@@ -1,7 +1,8 @@
 @import "./assets/styles/reset";
 @import "./assets/styles/typography";
+@import "./assets/styles/colors";
 
 body {
-  background: #0a192f;
-  color: white;
+  background: $color-black-100;
+  color: $color-white-200;
 }
