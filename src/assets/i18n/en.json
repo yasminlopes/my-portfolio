@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "menu": [
+      {
+        "item": "About me"
+      },
+      {
+        "item": "Experience"
+      },
+      {
+        "item": "Projects"
+      },
+      {
+        "item": "Contact"
+      }
+    ],
+    "button": "Resume"
+  }
+}

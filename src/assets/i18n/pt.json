@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "menu": [
+      {
+        "item": "Sobre mim"
+      },
+      {
+        "item": "Experiência"
+      },
+      {
+        "item": "Projetos"
+      },
+      {
+        "item": "Contato"
+      }
+    ],
+    "button": "Currículo"
+  }
+}
