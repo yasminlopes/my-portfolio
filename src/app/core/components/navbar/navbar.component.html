@@ -13,12 +13,14 @@
     </li>
 
     <li class="navbar__menu" [ngClass]="{ 'is-open': isMenuOpen }">
-      <ng-container *ngFor="let item of navbarItems; let i = index">
+      <ng-container
+        *ngFor="let item of 'navbar.menu' | translate; let i = index"
+      >
         <a class="navbar__menu--item">
           <span class="navbar__menu--index"
             >{{ (i + 1).toString().padStart(2, "0") }}.</span
           >
-          {{ item.menu }}
+          {{ item.item }}
         </a>
       </ng-container>
     </li>
