@@ -17,7 +17,6 @@ export class IpApiService {
     .get('https://ipapi.co/json', this.httpOptions)
     .pipe(
         map((response) => response),
-        tap(x => console.log(x)),
         catchError(() =>
           throwError(
             () => 'Could not connect to the server. Please try again later.'
