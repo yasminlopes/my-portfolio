@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  private _email = 'yasminlopes.ti@gmail.com'
+
+  public redirectToEmail() {
+    window.location.href = 'mailto:yasminlopes.ti@gmail.com';
+  }
+
 }

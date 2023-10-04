@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-banner-section',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner-section.component.scss']
 })
 export class BannerSectionComponent {
+
+  @Output() onClick = new EventEmitter()
 
 }
