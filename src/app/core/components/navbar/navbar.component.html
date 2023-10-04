@@ -2,10 +2,11 @@
   <ul class="navbar__items">
     <li class="navbar__logo">
       <img
-        width="70"
-        height="70"
+        width="50"
+        height="50"
+        priority
         class="navbar__items-img"
-        src="https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png"
+        [ngSrc]="'assets/img/yasmin_lopes_logo.svg'"
       />
     </li>
     <li class="navbar__burger" (click)="toggleMenu()">
