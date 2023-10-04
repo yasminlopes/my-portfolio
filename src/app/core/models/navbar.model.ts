@@ -1,19 +1,16 @@
+import { ItemDropdown } from 'src/app/shared/components/button-dropdown/button-dropdown.component';
 
-export interface Navbar {
-  menu: string;
-}
-
-export const NAVBAR_ITEMS: Navbar[] = [
+export const LANGUAGE_DROPDOWN_ITEMS: ItemDropdown[] = [
   {
-    menu: 'About me',
+    img: 'assets/img/br-flag.png',
+    description: 'Português (Brasil)',
+    isVisible: true,
+    onClickFunction: 'changeToPortuguese'
   },
   {
-    menu: 'Experience',
-  },
-  {
-    menu: 'Projects',
-  },
-  {
-    menu: 'Contact',
-  },
-];
+    img: 'assets/img/usa-flag.png',
+    description: 'English',
+    isVisible: true,
+    onClickFunction: 'changeToEnglish'
+  }
+]

@@ -24,12 +24,11 @@
     </li>
 
     <li class="navbar__menu-buttons">
-      <button class="navbar__menu-buttons--resume">Resume</button>
-
-      <select>
-        <option>English</option>
-        <option>Portuguese (Brasil)</option>
-      </select>
+      <app-button-dropdown
+        [items]="languageDropdown"
+        [icon]="'language'"
+        (selected)="executeEventDropdown($event)"
+      ></app-button-dropdown>
     </li>
   </ul>
 </nav>

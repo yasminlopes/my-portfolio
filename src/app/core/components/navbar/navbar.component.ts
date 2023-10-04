@@ -11,12 +11,14 @@ import { NAVBAR_ITEMS, Navbar } from '../../models/navbar.model';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-
-  public navbarItems = NAVBAR_ITEMS;
+  public languageDropdown = LANGUAGE_DROPDOWN_ITEMS;
   public isMenuOpen: boolean = false;
 
   public toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  public executeEventDropdown(item: ItemDropdown) {
+    this[item.onClickFunction](item, item.value);
+  }
 }
