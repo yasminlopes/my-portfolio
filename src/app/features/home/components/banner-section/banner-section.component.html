@@ -5,15 +5,15 @@
     <h3 class="section__heading__job">Front-end developer</h3>
     <p class="section__heading__description" translate>banner.description</p>
 
-    <button
+    <a
       class="section__heading__button"
-      href="mailto:yasminlopes.ti@gmail.com"
+      (click)="onClick.emit()"
       translate
     >
       <span class="section__heading__button--icon material-icons">
         forward_to_inbox
       </span>
       banner.button
-    </button>
+    </a>
   </div>
 </section>

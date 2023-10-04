@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  private _email = 'yasminlopes.ti@gmail.com'
+
+  public redirectToEmail() {
+    const url = new URL("mailto:", window.location.origin);
+    url.searchParams.set("to", this._email);
+  
+    window.open(url);
+  }
+
 }
