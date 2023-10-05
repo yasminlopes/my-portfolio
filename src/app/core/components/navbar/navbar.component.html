@@ -9,9 +9,6 @@
         [ngSrc]="'assets/img/yasmin_lopes_logo.svg'"
       />
     </li>
-    <li class="navbar__burger" (click)="toggleMenu()">
-      <i class="material-icons">{{ isMenuOpen ? "close" : "menu_open" }}</i>
-    </li>
 
     <li class="navbar__menu" [ngClass]="{ 'is-open': isMenuOpen }">
       <ng-container
@@ -37,6 +34,10 @@
         [icon]="'language'"
         (selected)="executeEventDropdown($event)"
       ></app-button-dropdown>
+    </li>
+
+    <li class="navbar__burger" (click)="toggleMenu()">
+      <i class="material-icons">{{ isMenuOpen ? "close" : "menu_open" }}</i>
     </li>
   </ul>
 </nav>

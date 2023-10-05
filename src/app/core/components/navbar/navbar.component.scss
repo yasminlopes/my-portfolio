@@ -14,7 +14,7 @@ $menuBreakpoint: 768px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 48px;
+      // gap: 48px;
       cursor: pointer;
     }
 
@@ -89,7 +89,7 @@ $menuBreakpoint: 768px;
         }
 
         @media (max-width: $menuBreakpoint) {
-          display: none;
+          // display: none;
         }
       }
 
@@ -134,5 +134,7 @@ $menuBreakpoint: 768px;
   #navbar {
     padding: 0px;
   }
+
+  
 
 }
