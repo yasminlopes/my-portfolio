@@ -1,4 +1,4 @@
-import { Component, DestroyRef, signal } from '@angular/core';
+import { Component, DestroyRef, HostListener, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LANGUAGE_DROPDOWN_ITEMS } from '../../models/navbar.model';
@@ -32,6 +32,7 @@ export class NavbarComponent {
 
   private _currentLanguage: string = 'br';
   private resumeArchiveName: string = 'dev_yasmin_lopes_cv';
+  private _isMobile = false;
 
   constructor(
     private _translate: TranslateService,
@@ -73,8 +74,9 @@ export class NavbarComponent {
     this._translate.use('pt');
     this._currentLanguage = 'pt';
   }
+  
 
-  /* public downloadResume() {
+  public downloadResume() {
     this._fileDownloadService
       .downloadFile(`assets/cv/${this.resumeArchiveName}.pdf`)
       .pipe(takeUntilDestroyed(this._destroyRef))
@@ -87,7 +89,7 @@ export class NavbarComponent {
         window.URL.revokeObjectURL(url);
         a.remove();
       });
-  } */
+  }
 
   public openResumeInNewTab() {
     this._fileDownloadService
@@ -100,6 +102,19 @@ export class NavbarComponent {
   
         window.URL.revokeObjectURL(url);
       });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this._isMobile = window.innerWidth <= 768;
+  }
+
+  public downloadOrOpenFile() {
+    if (this._isMobile) {
+      this.downloadResume();
+    } else {
+      this.openResumeInNewTab();
+    }
   }
   
 }
