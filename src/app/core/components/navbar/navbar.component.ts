@@ -76,7 +76,7 @@ export class NavbarComponent {
   }
   
 
-  public downloadResume() {
+  private downloadResume() {
     this._fileDownloadService
       .downloadFile(`assets/cv/${this.resumeArchiveName}.pdf`)
       .pipe(takeUntilDestroyed(this._destroyRef))
@@ -91,7 +91,7 @@ export class NavbarComponent {
       });
   }
 
-  public openResumeInNewTab() {
+  private openResumeInNewTab() {
     this._fileDownloadService
       .downloadFile(`assets/cv/${this.resumeArchiveName}.pdf`)
       .pipe(takeUntilDestroyed(this._destroyRef))
