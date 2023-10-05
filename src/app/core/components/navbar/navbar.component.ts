@@ -1,9 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, DestroyRef, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import {
-  LANGUAGE_DROPDOWN_ITEMS,
-} from '../../models/navbar.model';
+import { LANGUAGE_DROPDOWN_ITEMS } from '../../models/navbar.model';
 import {
   ButtonDropdownComponent,
   ItemDropdown,
@@ -11,6 +9,9 @@ import {
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { lastValueFrom } from 'rxjs';
 import { IpApiService } from 'src/app/shared/services/ip-api/ip-api.service';
+import { HttpClient } from '@angular/common/http';
+import { FileDownloadService } from 'src/app/shared/services/file-download/file-download.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-navbar',
@@ -20,7 +21,7 @@ import { IpApiService } from 'src/app/shared/services/ip-api/ip-api.service';
     RouterLink,
     NgOptimizedImage,
     ButtonDropdownComponent,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
@@ -30,10 +31,13 @@ export class NavbarComponent {
   public isMenuOpen: boolean = false;
 
   private _currentLanguage: string = 'br';
+  private resumeArchiveName: string = 'dev_yasmin_lopes_cv';
 
   constructor(
     private _translate: TranslateService,
-    private _apiService: IpApiService
+    private _apiService: IpApiService,
+    private _fileDownloadService: FileDownloadService,
+    private _destroyRef: DestroyRef,
   ) {}
 
   public toggleMenu(): void {
@@ -49,7 +53,7 @@ export class NavbarComponent {
     const ipInfo = await lastValueFrom(ipInfo$);
 
     this._translate.setDefaultLang('en');
-    
+
     if (ipInfo?.country_code?.toUpperCase() == 'BR') {
       this._translate.setDefaultLang('pt');
       this._currentLanguage = 'pt';
@@ -69,4 +73,33 @@ export class NavbarComponent {
     this._translate.use('pt');
     this._currentLanguage = 'pt';
   }
+
+  /* public downloadResume() {
+    this._fileDownloadService
+      .downloadFile(`assets/cv/${this.resumeArchiveName}.pdf`)
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = this.resumeArchiveName;
+        a.click();
+        window.URL.revokeObjectURL(url);
+        a.remove();
+      });
+  } */
+
+  public openResumeInNewTab() {
+    this._fileDownloadService
+      .downloadFile(`assets/cv/${this.resumeArchiveName}.pdf`)
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe((blob) => {
+        const url = window.URL.createObjectURL(blob);
+  
+        window.open(url, '_blank');
+  
+        window.URL.revokeObjectURL(url);
+      });
+  }
+  
 }
