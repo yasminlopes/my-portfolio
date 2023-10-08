@@ -1,0 +1,110 @@
+@import "../../../../../assets/styles/colors";
+
+.section {
+  display: flex;
+  .about-me {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__title {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 10px 0 40px;
+      width: 100%;
+      white-space: nowrap;
+      font-size: 2rem;
+      font-weight: 600;
+      color: $color-indigo-300;
+      margin: 0 0 10px 0;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 300px;
+        background-color: $color-black-200;
+        position: relative;
+        top: -5px;
+        margin-left: 20px;
+      }
+    }
+
+    &__description,
+    &__subdescription {
+      max-width: calc(100vw - 800px);
+      white-space: normal;
+      line-height: 24px;
+      font-size: 1rem;
+      color: $color-indigo-100;
+    }
+    &__skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      overflow: hidden;
+      margin: 20px 0 0 0;
+
+      &--item {
+        font-size: 1rem;
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        color: $color-indigo-100;
+
+        &:before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: $color-indigo-300;
+          font-size: 1rem;
+          line-height: 12px;
+        }
+      }
+    }
+
+    &__img {
+      margin: auto;
+      &:after {
+        content: "";
+        border: 2px solid $color-indigo-500;
+        z-index: 0;
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 3px;
+        bottom: 290px;
+        left: 23px;
+      }
+
+      img {
+        position: relative;
+        width: 300px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+  .about-me {
+    &__description,
+    &__subdescription {
+      width: calc(100vw - 100px);
+    }
+    &__img {
+      width: 80vw;
+    }
+  }
+}
