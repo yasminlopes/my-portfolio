@@ -20,5 +20,22 @@
     "pretitle": "Hello world! My name is",
     "description": "I have a degree in Analysis and Systems Development from UNIMAR, and I have experience in the programming field as a web software developer. I love technology and am constantly seeking to enhance my skills with good programming practices, system architectures, and UI/UX.",
     "button": "Get in touch"
+  },
+  "about_me": {
+    "title": "About me",
+    "description": "Hi! My name is Yasmin, I love technology and Design. Combining the two, I create ideas and develop solutions using my creativity and knowledge. I am constantly learning new things and exploring innovative ways to create better applications.", 
+    "sub_description": "These are some of the technologies I have been working with recently:",
+    "skills": [
+      "Angular and RxJs",
+      "HTML and S(CSS)", 
+      "Javascript, Typescript",
+      "Jest, Jasmine, Karma (TDD)",
+      "Git / Git Flow",
+      "Design System / Storybook",
+      "Node.js",
+      "Python / Django",
+      "Bootstrap, Material, PrimeNG, Tailwind CSS",
+      "Clean Code, Solid, Clean Architecture"
+    ]
   }
 }

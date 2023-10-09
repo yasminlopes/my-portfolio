@@ -20,5 +20,22 @@
     "pretitle": "Olá mundo! Me chamo",
     "description": "Sou formada em Análise e Desenvolvimento de Sistemas pela UNIMAR, tenho experiência na área de programação como desenvolvedora de software web. Amo a tecnologia e estou sempre buscando aprimorar minhas habilidades com boas práticas de programação, arquiteturas de sistemas e UI/UX.",
     "button": "Entre em contato"
+  },
+  "about_me": {
+    "title": "Sobre mim",
+    "description": "Olá! Meu nome é Yasmin, amo a tecnologia e o Design. Unindo os dois, crio ideias e desenvolvo soluções usando minha criatividade e meu conhecimento. Estou constantemente aprendendo coisas novas e explorando maneiras inovadoras de criar melhores aplicações.",
+    "sub_description": "Essas são algumas das tecnologias que estive trabalhando recentemente:",
+    "skills": [
+      "Angular e RxJs",
+      "HTML e S(CSS)",
+      "Javascript, Typescript",
+      "Jest, Jasmine, Karma (TDD)",
+      "Git / Git Flow",
+      "Design System / Storybook",
+      "Node.js",
+      "Python / Django",
+      "Bootstrap, Material, PrimeNG, Tailwind CSS",
+      "Clean Code, Solid, Clean Architecture"
+    ]
   }
 }
