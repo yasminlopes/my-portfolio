@@ -101,7 +101,7 @@
   .about-me {
     &__description,
     &__subdescription {
-      width: calc(100vw - 100px);
+      max-width: none !important;
     }
     &__img {
       width: 80vw;
