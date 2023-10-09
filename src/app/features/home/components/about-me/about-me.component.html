@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="about-me">
+    <h3 class="about-me__title">
+      <span class="about-me__title--test" translate>about_me.title</span>
+  </h3>
+  <span class="about-me__description" translate> about_me.description</span>
+  <span class="about-me__subdescription" translate> about_me.sub_description</span>
+  <ul class="about-me__skills">
+    <ng-container *ngFor="let item of skillsList | translate">
+      <li class="about-me__skills--item">
+        {{ item}}
+      </li>
+    </ng-container>
+  </ul>
+  </div>
+  <div class="about-me__img">
+    <img src="assets/img/yasminlopes.jpg" alt="">
+  </div>
+</section>
