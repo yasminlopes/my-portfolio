@@ -62,5 +62,24 @@
         ]
       }
     ]
+  },
+  "works": {
+    "title": "Meus Projetos",
+    "projects": [
+      {
+        "title": "Título do Projeto",
+        "description": "Aqui alguma descrição sobre o projeto",
+        "images": [
+          "assets/img/",
+          "assets/img/",
+          "assets/img/"
+        ],
+        "technologies": [
+          "Angular",
+          "Signals",
+          "Typescript"
+        ]
+      }
+    ]
   }
 }
