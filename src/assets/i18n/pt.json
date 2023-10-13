@@ -37,5 +37,30 @@
       "Bootstrap, Material, PrimeNG, Tailwind CSS",
       "Clean Code, Solid, Clean Architecture"
     ]
+  },
+  "experience": {
+    "title": "Onde Trabalhei",
+    "jobs": [
+      {
+        "tab": "Cuca Fresca - Fornecedora de Sistemas",
+        "title": "Desenvolvedora de Software",
+        "description": [
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui"
+        ]
+      },
+      {
+        "tab": "House Performance",
+        "title": "Diretora de Arte",
+        "description": [
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
+          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui"
+        ]
+      }
+    ]
   }
 }
