@@ -42,23 +42,49 @@
     "title": "Onde Trabalhei",
     "jobs": [
       {
-        "tab": "Cuca Fresca - Fornecedora de Sistemas",
+        "tab": "Cuca Fresca",
         "title": "Desenvolvedora de Software",
+        "date": "Set 2022 - Atual",
         "description": [
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui"
+          "Desenvolvimento na plataforma de contabilidade, utilizando no front-end o framework Angular, back-end utilizando Node.js e Typescript e PostgreSQL como banco de dados.",
+          "Utilizo Design Patterns, Facade, Adapter, Singleton, Decorators, MVC, etc.",
+          "Organização do código com boas práticas de programação escrevendo código limpo e aplicando conceitos SOLID.",
+          "Criação de testes unitários com principios TDD utilizando Jest e Jasmine.",
+          "Versionamento de código com Git e Git Flow.",
+          "Documentação de componentes utilizando Storybook e documentação da API utilizando Swagger."
         ]
       },
       {
         "tab": "House Performance",
         "title": "Diretora de Arte",
+        "date": "Jul 2022 - Set 2022",
         "description": [
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui",
-          "Alguma descrição sobre o trabalho para pensar sobre o que escrever aqui"
+          "Criação de campanhas para diversas empresas dos setores imobiliário e automotivo.",
+          "Criação de posts para social media e e-mail marketing. ",
+          "Edição de vídeo, retouch e tratamento de imagens.",
+          "Criação de selos 3D e desenvolvimento de Landing Pages."
+        ]
+      },
+      {
+        "tab": "Mustache LTDA",
+        "title": "Diretora de Arte",
+        "date": "Nov 2021 - Jul 2022",
+        "description": [
+          "Criação de peças físicas e digitais para diversas empresas de diversos segmentos",
+          "Desenvolvimento e desdobramento de KVs para campanhas publicitárias, ambientação, tratamento e manipulação de imagens",
+          "Criação de posts para social media, produção de impressos e animações simples em vídeos.",
+          "Suporte no setor web como front-end, desenvolvimento de Landing Pages utilizando HTML, CSS, JavaScript, Bootstrap, Wordpress, realizando a conversão Design To Code"
+        ]
+      },
+      {
+        "tab": "Comafer Ferramentas",
+        "title": "Gestão administrativa em Informática",
+        "date": "Nov 2019 - Nov 2021",
+        "description": [
+          "Administração da área de informática e suporte no software de emissão de NFe.",
+          "Tratamento de imagens dos produtos para o site de vendas.",
+          "Manutenção e controle de planilhas utilizando Excel.",
+          "Expedição, vendas e pós-vendas."
         ]
       }
     ]

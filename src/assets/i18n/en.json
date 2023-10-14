@@ -23,11 +23,11 @@
   },
   "about_me": {
     "title": "About me",
-    "description": "Hi! My name is Yasmin, I love technology and Design. Combining the two, I create ideas and develop solutions using my creativity and knowledge. I am constantly learning new things and exploring innovative ways to create better applications.", 
+    "description": "Hi! My name is Yasmin, I love technology and Design. Combining the two, I create ideas and develop solutions using my creativity and knowledge. I am constantly learning new things and exploring innovative ways to create better applications.",
     "sub_description": "These are some of the technologies I have been working with recently:",
     "skills": [
       "Angular and RxJs",
-      "HTML and S(CSS)", 
+      "HTML and S(CSS)",
       "Javascript, Typescript",
       "Jest, Jasmine, Karma (TDD)",
       "Git / Git Flow",
@@ -39,26 +39,52 @@
     ]
   },
   "experience": {
-    "title": "Where I’ve Worked",
+    "title": "Where I Worked",
     "jobs": [
       {
-        "tab": "Cuca Fresca - Fornecedora de Sistemas",
+        "tab": "Cuca Fresca",
         "title": "Software Developer",
+        "date": "Sep 2022 - Present",
         "description": [
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here"
+          "Development on the accounting platform, using Angular framework on the front-end, Node.js and Typescript on the back-end, and PostgreSQL as the database.",
+          "Using Design Patterns, Facade, Adapter, Singleton, Decorators, MVC, etc.",
+          "Code organization with good programming practices, writing clean code and applying SOLID concepts.",
+          "Creation of unit tests with TDD principles using Jest and Jasmine.",
+          "Code versioning with Git and Git Flow.",
+          "Component documentation using Storybook and API documentation using Swagger."
         ]
       },
       {
         "tab": "House Performance",
         "title": "Art Director",
+        "date": "Jul 2022 - Sep 2022",
         "description": [
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here",
-          "Some description about the work to think about what to write here"
+          "Creation of campaigns for various companies in the real estate and automotive sectors.",
+          "Creation of social media posts and email marketing.",
+          "Video editing, retouching, and image processing.",
+          "Creation of 3D stamps and development of Landing Pages."
+        ]
+      },
+      {
+        "tab": "Mustache LTDA",
+        "title": "Art Director",
+        "date": "Nov 2021 - Jul 2022",
+        "description": [
+          "Creation of physical and digital pieces for various companies in various segments.",
+          "Development and unfolding of KVs for advertising campaigns, setting, and image manipulation.",
+          "Creation of social media posts, production of prints, and simple animations in videos.",
+          "Support in the web sector as front-end, development of Landing Pages using HTML, CSS, JavaScript, Bootstrap, Wordpress, performing the Design To Code conversion."
+        ]
+      },
+      {
+        "tab": "Comafer Ferramentas",
+        "title": "Administrative Management in Informatics",
+        "date": "Nov 2019 - Nov 2021",
+        "description": [
+          "Administration of the computer area and support in the NFe issuance software.",
+          "Treatment of product images for the sales website.",
+          "Maintenance and control of spreadsheets using Excel.",
+          "Expedition, sales, and after-sales."
         ]
       }
     ]
@@ -69,16 +95,8 @@
       {
         "title": "Project Title",
         "description": "Here some description about the project",
-        "images": [
-          "assets/img/",
-          "assets/img/",
-          "assets/img/"
-        ],
-        "technologies": [
-          "Angular",
-          "Signals",
-          "Typescript"
-        ]
+        "images": ["assets/img/", "assets/img/", "assets/img/"],
+        "technologies": ["Angular", "Signals", "Typescript"]
       }
     ]
   }
