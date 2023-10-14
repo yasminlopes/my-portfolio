@@ -1,0 +1,41 @@
+<section class="section jobs" id="experience__jobs">
+  <div class="experience">
+    <h3 class="experience__title">
+      <span class="experience__title--test" translate>experience.title</span>
+    </h3>
+    <div class="experience__jobs ">
+      <ul
+        ngbNav
+        #nav="ngbNav"
+        [(activeId)]="active"
+        orientation="vertical"
+        class="experience__jobs__tabs"
+      >
+        <li
+          *ngFor="let job of experienceList | translate; let i = index"
+          [title]="job.tab"
+          [ngbNavItem]="i"
+          [ngClass]="{ active: active === i }"
+        >
+          <a ngbNavLink class="experience__jobs-tab">{{ job.tab }}</a>
+          <ng-template ngbNavContent>
+            <h4 class="experience__jobs-title">
+              {{ job.title }}
+              <span class="experience__jobs-company">@ {{ job.tab }}</span>
+            </h4>
+            <h5 class="experience__date">{{ job.date }}</h5>
+            <p
+              *ngFor="
+                let jobDescriptionParagraph of job.description;
+                let i = index
+              "
+              class="experience__jobs-description"
+              [innerHTML]="jobDescriptionParagraph | translate"
+            ></p>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+  </div>
+</section>

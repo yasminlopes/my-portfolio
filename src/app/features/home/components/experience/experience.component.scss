@@ -1,0 +1,143 @@
+@import "../../../../../assets/styles/colors";
+
+.section {
+  .experience {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 10px 0 40px;
+      width: 100%;
+      white-space: nowrap;
+      font-size: 2rem;
+      font-weight: 600;
+      color: $color-indigo-300;
+      margin-bottom: 10px;
+    }
+
+    &__jobs {
+      display: grid;
+      grid-template-columns: 200px 3fr;
+      gap: 16px;
+      align-items: flex-start;
+
+      &-tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border-right: 1px solid $color-black-200;
+      }
+
+      &-title {
+        color: $color-indigo-100;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      &-company {
+        color: $color-indigo-300;
+      }
+
+      &-tab {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+        padding: 8px;
+        white-space: nowrap;
+        font-size: 1rem;
+        color: $color-indigo-100;
+
+        &.active {
+          color: $color-indigo-600;
+        }
+      }
+
+      &__tabs {
+        cursor: pointer;
+        li {
+            border-left: 2px solid $color-black-200;
+            padding: 10px;
+
+            &:hover {
+                background-color: $color-black-200;
+                color: $color-indigo-300;
+            }
+        }
+
+        li.active {
+            border-left-color: $color-indigo-600;
+            font-weight: 700;
+        }
+
+        @media only screen and (max-width: 768px) {
+            li {
+                border-bottom: 2px solid $color-black-200;
+                padding: 10px;
+            border-left: none;
+            }
+
+
+            li.active {
+                border-bottom-color:$color-indigo-600;
+                font-weight: 700;
+            }
+        }
+    }
+
+      &-description {
+        position: relative;
+        line-height: 20px;
+        padding: 10px;
+        padding-left: 20px;
+        margin-left: 8px;
+        max-width: 800px;
+        width: 100%;
+        font-size: 1rem;
+
+        &:before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: $color-indigo-300;
+        }
+      }
+    }
+
+    &__date {
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: $color-indigo-200;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .experience {
+    &__jobs {
+      grid-template-columns: 1fr !important;
+
+      &__tabs {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        li {
+          scroll-snap-align: start;
+        }
+      }
+    }
+  }
+}
