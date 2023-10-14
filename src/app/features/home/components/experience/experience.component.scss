@@ -1,5 +1,22 @@
 @import "../../../../../assets/styles/colors";
 
+@mixin tab-styles {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  padding: 8px;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: $color-indigo-100;
+
+  &.active {
+    color: $color-indigo-600;
+  }
+}
+
 .section {
   .experience {
     padding: 48px;
@@ -24,74 +41,58 @@
       display: grid;
       grid-template-columns: 200px 3fr;
       gap: 16px;
-      align-items: flex-start;
 
       &-tabs {
         display: flex;
         flex-direction: column;
         gap: 8px;
         border-right: 1px solid $color-black-200;
+
+        @include tab-styles;
       }
 
-      &-title {
-        color: $color-indigo-100;
+      &-title,
+      &-company {
         font-size: 22px;
         font-weight: 500;
-        margin-bottom: 5px;
-      }
-
-      &-company {
-        color: $color-indigo-300;
+        color: $color-indigo-100;
       }
 
       &-tab {
-        display: inline-block;
-        text-decoration: none;
-        color: inherit;
-        position: relative;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-        cursor: pointer;
-        padding: 8px;
-        white-space: nowrap;
-        font-size: 1rem;
-        color: $color-indigo-100;
-
-        &.active {
-          color: $color-indigo-600;
-        }
+        @include tab-styles;
       }
 
       &__tabs {
         cursor: pointer;
+
         li {
-            border-left: 2px solid $color-black-200;
-            padding: 10px;
+          border-left: 2px solid $color-black-200;
+          padding: 10px;
 
-            &:hover {
-                background-color: $color-black-200;
-                color: $color-indigo-300;
-            }
-        }
+          &:hover {
+            background-color: $color-black-200;
+            color: $color-indigo-300;
+          }
 
-        li.active {
+          &.active {
             border-left-color: $color-indigo-600;
             font-weight: 700;
+          }
         }
 
         @media only screen and (max-width: 768px) {
-            li {
-                border-bottom: 2px solid $color-black-200;
-                padding: 10px;
+          li {
+            border-bottom: 2px solid $color-black-200;
+            padding: 10px;
             border-left: none;
-            }
 
-
-            li.active {
-                border-bottom-color:$color-indigo-600;
-                font-weight: 700;
+            &.active {
+              border-bottom-color: $color-indigo-600;
+              font-weight: 700;
             }
+          }
         }
-    }
+      }
 
       &-description {
         position: relative;
