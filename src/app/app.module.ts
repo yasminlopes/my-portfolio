@@ -8,6 +8,7 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FeaturesModule } from './features/features.module';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
   declarations: [AppComponent,],
@@ -15,6 +16,7 @@ import { FeaturesModule } from './features/features.module';
     BrowserModule,
     AppRoutingModule,
     NavbarComponent,
+    FooterComponent,
     BrowserAnimationsModule,
     HttpClientModule,
     FeaturesModule,
