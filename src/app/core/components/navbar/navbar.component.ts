@@ -1,6 +1,6 @@
 import { Component, DestroyRef, HostListener, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LANGUAGE_DROPDOWN_ITEMS } from '../../models/navbar.model';
 import {
   ButtonDropdownComponent,
@@ -38,7 +38,8 @@ export class NavbarComponent {
     private _translate: TranslateService,
     private _apiService: IpApiService,
     private _fileDownloadService: FileDownloadService,
-    private _destroyRef: DestroyRef,
+    private _router: Router,
+    private _destroyRef: DestroyRef
   ) {}
 
   public toggleMenu(): void {
@@ -74,7 +75,6 @@ export class NavbarComponent {
     this._translate.use('pt');
     this._currentLanguage = 'pt';
   }
-  
 
   private downloadResume() {
     this._fileDownloadService
@@ -97,9 +97,9 @@ export class NavbarComponent {
       .pipe(takeUntilDestroyed(this._destroyRef))
       .subscribe((blob) => {
         const url = window.URL.createObjectURL(blob);
-  
+
         window.open(url, '_blank');
-  
+
         window.URL.revokeObjectURL(url);
       });
   }
@@ -116,5 +116,20 @@ export class NavbarComponent {
       this.openResumeInNewTab();
     }
   }
+
+  public scrollToSection(elementId: string): void {
+    const targetElement = document.getElementById(elementId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.navigateToHomeAndScrollToElement(elementId);
+    }
+  }
   
+  private navigateToHomeAndScrollToElement(elementId: string): void {
+    this._router.navigate(['/home']).then(() => {
+      const targetElement = document.getElementById(elementId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 }

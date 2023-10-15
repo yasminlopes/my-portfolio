@@ -2,16 +2,20 @@
   "navbar": {
     "menu": [
       {
-        "item": "Sobre mim"
+        "item": "Sobre mim",
+        "id": "about-me"
       },
       {
-        "item": "Experiência"
+        "item": "Experiência",
+        "id": "experience__jobs"
       },
       {
-        "item": "Projetos"
+        "item": "Projetos",
+        "id": "projects"
       },
       {
-        "item": "Contato"
+        "item": "Contato",
+        "id": "contact"
       }
     ],
     "button": "Currículo"

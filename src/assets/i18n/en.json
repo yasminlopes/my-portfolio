@@ -2,16 +2,20 @@
   "navbar": {
     "menu": [
       {
-        "item": "About me"
+        "item": "About me",
+        "id": "about-me"
       },
       {
-        "item": "Experience"
+        "item": "Experience",
+        "id": "experience__jobs"
       },
       {
-        "item": "Projects"
+        "item": "Projects",
+        "id": "projects"
       },
       {
-        "item": "Contact"
+        "item": "Contact",
+        "id": "contact"
       }
     ],
     "button": "Resume"
