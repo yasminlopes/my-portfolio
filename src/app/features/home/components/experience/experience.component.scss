@@ -55,7 +55,14 @@
       &-company {
         font-size: 22px;
         font-weight: 500;
+      }
+
+      &-title {
         color: $color-indigo-100;
+      }
+
+      &-company {
+        color: $color-indigo-300;
       }
 
       &-tab {
