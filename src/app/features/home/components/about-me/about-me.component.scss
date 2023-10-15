@@ -3,6 +3,7 @@
 .section {
   display: flex;
   align-items: center;
+  margin: 50px 0;
   .about-me {
     display: flex;
     flex-direction: column;
@@ -72,6 +73,17 @@
 
     &__img {
       margin: auto;
+
+      img {
+        position: relative;
+        width: 300px;
+        border-radius: 50%;
+        border: 2px solid $color-indigo-500;
+        padding: 10px;
+      }
+    }
+    /*     &__img {
+      margin: auto;
       &:after {
         content: "";
         border: 2px solid $color-indigo-500;
@@ -90,13 +102,14 @@
         width: 300px;
         z-index: 2;
       }
-    }
+    } */
   }
 }
 
 @media (max-width: 768px) {
   .section {
     flex-direction: column;
+    align-items: normal;
   }
   .about-me {
     &__description,

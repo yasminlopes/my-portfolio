@@ -18,6 +18,9 @@
 }
 
 .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .experience {
     display: flex;
     flex-direction: column;
